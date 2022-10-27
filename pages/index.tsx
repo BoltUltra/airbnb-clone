@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Header from "../components/Header";
+import Image from "next/image";
+import { Header, Banner } from "../components";
 
 const Home: NextPage = () => {
   return (
@@ -11,7 +12,7 @@ const Home: NextPage = () => {
       </Head>
 
       <Header />
-      {/* Banner */}
+      <Banner/>
     </div>
   );
 };
