@@ -17,7 +17,6 @@ const Header = () => {
           width={100}
           height={10}
           object-fit="contain"
-          objectPosition="left"
         />
       </div>
 
