@@ -1,9 +1,9 @@
-import type { NextPage } from "next";
+// import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { Header, Banner, SmallCard, MediumCard } from "../components";
 
-const Home: NextPage = ({ exploreData, cardsData }) => {
+const Home = ({ exploreData, cardsData }) => {
   return (
     <div className="">
       <Head>
