@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import { Header, Banner, SmallCard } from "../components";
+import { Header, Banner, SmallCard, MediumCard } from "../components";
 
-const Home: NextPage = ({ exploreData }) => {
+const Home: NextPage = ({ exploreData, cardsData }) => {
   return (
     <div className="">
       <Head>
@@ -30,6 +30,16 @@ const Home: NextPage = ({ exploreData }) => {
             ))}
           </div>
         </section>
+
+        <section>
+          <h2 className="text-4xl font-semibold py-8">Live Anywhere</h2>
+
+          <div className="flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3">
+            {cardsData?.map(({ img, title }) => (
+              <MediumCard key={img} img={img} title={title} />
+            ))}
+          </div>
+        </section>
       </main>
     </div>
   );
@@ -41,9 +51,14 @@ export async function getStaticProps() {
     (res) => res.json()
   );
 
+  const cardsData = await fetch("https://www.jsonkeeper.com/b/VHHT").then(
+    (res) => res.json()
+  );
+
   return {
     props: {
       exploreData,
+      cardsData,
     },
   };
 }
