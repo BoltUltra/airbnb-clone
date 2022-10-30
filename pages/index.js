@@ -7,6 +7,7 @@ import {
   SmallCard,
   MediumCard,
   LargeCard,
+  Footer,
 } from "../components";
 
 const Home = ({ exploreData, cardsData }) => {
@@ -54,6 +55,8 @@ const Home = ({ exploreData, cardsData }) => {
           buttonText="Get Inspired"
         />
       </main>
+
+      <Footer />
     </div>
   );
 };
