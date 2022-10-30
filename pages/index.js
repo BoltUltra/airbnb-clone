@@ -1,7 +1,13 @@
 // import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import { Header, Banner, SmallCard, MediumCard } from "../components";
+import {
+  Header,
+  Banner,
+  SmallCard,
+  MediumCard,
+  LargeCard,
+} from "../components";
 
 const Home = ({ exploreData, cardsData }) => {
   return (
@@ -40,6 +46,13 @@ const Home = ({ exploreData, cardsData }) => {
             ))}
           </div>
         </section>
+
+        <LargeCard
+          img="https://links.papareact.com/4cj"
+          title="The Geatest Outdoors"
+          description="Wishlists created by Airbnb"
+          buttonText="Get Inspired"
+        />
       </main>
     </div>
   );
